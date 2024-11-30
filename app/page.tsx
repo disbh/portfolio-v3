@@ -1,58 +1,139 @@
 import Image from "next/image";
+import Resume from "../components/Resume";
+import Project from "../components/Project";
+
+const jobExperience = [
+  {
+    title: "Data Analyst",
+    company: "Boilerexams",
+    duration: "November 2024 - Present",
+    description: "Analyzed over 5.64 million user submissions to derive conclusions for 21+ courses at Purdue University. Developed models and visualized key findings to understand exam question biases to better effectively prepare students for exams using data from 192 exams.",
+  },
+  {
+    title: "Account Director, Workshop Organizer",
+    company: "Purdue IEEE ",
+    duration: "September 2024 - Present",
+    description: "Collaborate on the development on workshops on engineering topics to foster innovative environments. Present to 50+ people at workshops teaching the intersection of machine learning and finance.",
+  },
+  {
+    title: "Volunteer Developer",
+    company: "Jubilee Club, A Bengali Cultural Club",
+    duration: "Janurary 2022 - August 2024",
+    description: "Developed and published a portal to other resources for the local ethnic community. Renovated website to attract 6,000+ unique visitors. Received “Youth Leadership” award for contribution to local community.",
+  },
+  {
+    title: "Internship",
+    company: "SAP (Systems, Applications and Products in Data Processing)",
+    duration: "September 2024 - Present",
+    description: "Developed a mobile application for industry to effectively upload software issue tickets and obtain resolutions. Engaged with professionals during workshops to grow soft skills like written and oral communication.",
+  },
+];
+
+const ProjectExperience = [
+  {
+    title: "Indian Tech Startup Success Prediction",
+    duration: "July 2023 - Present",
+    description: "Developed Random Forest and XGBoost models ML to predict Indian tech startup success with 82 percent accuracy. Authored paper and presented findings at the Purdue 2024 Undergraduate Research Expo.",
+  },
+  {
+    title: "FunCha: A Website for Ethnic Food",
+    duration: "June 2023 - August 2024",
+    description: "Developed a roadmap and led group of three to curate and compile Bengali recipes, addressing a lack of Southeast Asian ethnic food resources online. 2,000+ unique page views within the first six months.",
+  },
+  {
+    title: "Wharton High School Data Science Competition",
+    duration: "January 2024 - May 2024",
+    description: "Competed and placed 2nd against 300+ teams from 37 countries with the highest accuracy model and presentation. Developed machine learning models to predict league and tournament results of a simulated soccer league.",
+  },
+];
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="h-screen overflow-hidden p-4 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="grid grid-cols-2 gap-8 row-start-2 items-start justify-between w-full h-[calc(100vh-200px)]">
+        
+        <div className="grid grid-cols-1 gap-2 max-w-xl pl-48 sticky top-20">
+          <div className="grid items-center gap-2">
+            <h1 className="text-4xl font-bold mb-4">Dishan Bhattacharya</h1>
+            <h2 className="text-2xl text-gray-700 mb-4">Undergraduate Student at Purdue University</h2>
+            <p className="text-gray-600">
+              I strive to directly tackle issues through data and technology.
+            </p>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          
+          <a href="#about-me">About Me</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+        </div>
+
+        <div className="flex-1 max-w-xl overflow-y-auto max-h-[calc(100vh-200px)] sticky top-20">
+          <div className="space-y-16">
+            <div id="about-me">
+              I am a current student at Purdue University. I am pursuing a degree in Computer Science with a minor in Economics. I'm passionate about using technology to solve real-world problems in the finance sector and have directly worked on projects in this field. I have experience in data analysis, machine learning, and software development. I am always looking for new opportunities to learn and grow. I am currently seeking internships for the summer of 2025. Feel free to reach out to me at <a href="mailto:bhatt123@purdue.edu" className ="hover:underline">bhatt123@purdue.edu</a>.
+            </div>
+
+            <div id="experience">
+              <h2 className="text-2xl font-bold mb-4">Experience</h2>
+              {jobExperience.map((job, index) => (
+                <div key={index} className="mb-8">
+                  <h3 className="text-xl font-bold">{job.title}</h3>
+                  <p className="text-gray-600 mb-2">{job.company}</p>
+                  <p className="text-gray-600 mb-2">{job.duration}</p>
+                  <p>{job.description}</p>
+                </div>
+              ))}
+          </div>
+
+            <div id="projects">
+            <h2 className="text-2xl font-bold mb-4">Projects</h2>
+              {ProjectExperience.map((ProjectItem, index) => (
+                <div key={index} className="mb-8">
+                  <h3 className="text-xl font-bold">{ProjectItem.title}</h3>
+                  <p className="text-gray-600 mb-2">{ProjectItem.duration}</p>
+                  <p>{ProjectItem.description}</p>
+                </div>
+              ))}
+            </div>
+
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center py-8 mt-8">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://github.com/disbh/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/github.svg"
+            alt="GitHub Icon"
+            width={24}
+            height={24}
+          />
+          GitHub
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://www.linkedin.com/in/dishanb/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/linkedin.png"
+            alt="LinkedIn Icon"
+            width={24}
+            height={24}
+          />
+          LinkedIn
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -60,42 +141,14 @@ export default function Home() {
             aria-hidden
             src="/file.svg"
             alt="File icon"
-            width={16}
-            height={16}
+            width={20}
+            height={20}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          Full Resume
         </a>
       </footer>
     </div>
   );
 }
+
+
