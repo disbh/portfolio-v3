@@ -55,9 +55,9 @@ export default function Home() {
         
         <div className="grid grid-cols-1 gap-2 max-w-xl pl-48 sticky top-20">
           <div className="grid items-center gap-2">
-            <a href="?"><h1 className="text-4xl font-bold mb-4">Dishan Bhattacharya</h1></a>
-            <h2 className="text-2xl text-cyan-200 mb-2">Undergraduate Student at Purdue University</h2>
-            <p className="text-cyan-400">
+            <a href="?"><h1 className="text-4xl font-bold mb-4 text-gray-100">Dishan Bhattacharya</h1></a>
+            <h2 className="text-2xl text-gray-200 mb-2">Undergraduate Student at Purdue University</h2>
+            <p className="text-gray-400">
               I strive to directly tackle issues through data and technology.
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function Home() {
           <div className="space-y-16">
             <div id="about-me">
               <h2 className="text-3xl font-bold mb-4">About Me</h2>
-              I am currently pursuing a degree in Computer Science and a minor in Economics at Purdue University. I'm passionate about using technology to solve real-world problems in the finance sector and have directly worked on projects in this field. With experience in data analysis, machine learning, and software development, I am always looking for new opportunities to learn and grow. I am currently seeking internships for the summer of 2025. Feel free to reach out to me at <a href="mailto:bhatt123@purdue.edu" className ="hover:underline">bhatt123@purdue.edu</a>.
+              <p className="">I am currently pursuing a degree in Computer Science and a minor in Economics at Purdue University. I'm passionate about using technology to solve real-world problems in the finance sector and have directly worked on projects in this field. With experience in data analysis, machine learning, and software development, I am always looking for new opportunities to learn and grow. I am currently seeking internships for the summer of 2025. Feel free to reach out to me at <a href="mailto:bhatt123@purdue.edu" className ="hover:underline">bhatt123@purdue.edu</a>.</p>
             </div>
           
 
@@ -80,10 +80,10 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-4">Experience</h2>
               {jobExperience.map((job, index) => (
                 <div key={index} className="mb-8">
-                  <h3 className="text-xl font-bold">{job.title}</h3>
-                  <p className="text-gray-600 mb-2">{job.company}</p>
-                  <p className="text-gray-600 mb-2">{job.duration}</p>
-                  <p>{job.description}</p>
+                  <h3 className="text-xl font-bold text-cyan-200 mb-1">{job.title}</h3>
+                  <p className="text-cyan-400">{job.company}</p>
+                  <p className="text-cyan-500 mb-2 italic">{job.duration}</p>
+                  <p className="">{job.description}</p>
                 </div>
               ))}
           </div>
@@ -92,9 +92,9 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-4">Projects</h2>
               {ProjectExperience.map((ProjectItem, index) => (
                 <div key={index} className="mb-8">
-                  <h3 className="text-xl font-bold">{ProjectItem.title}</h3>
-                  <p className="text-gray-600 mb-2">{ProjectItem.duration}</p>
-                  <p>{ProjectItem.description}</p>
+                  <h3 className="text-xl font-bold text-emerald-200">{ProjectItem.title}</h3>
+                  <p className="text-emerald-400 mb-2">{ProjectItem.duration}</p>
+                  <p className="">{ProjectItem.description}</p>
                 </div>
               ))}
             </div>
