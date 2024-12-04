@@ -56,24 +56,25 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-2 max-w-xl pl-48 sticky top-20">
           <div className="grid items-center gap-2">
             <a href="?"><h1 className="text-4xl font-bold mb-4">Dishan Bhattacharya</h1></a>
-            <h2 className="text-2xl text-gray-700 mb-4">Undergraduate Student at Purdue University</h2>
-            <p className="text-gray-600">
+            <h2 className="text-2xl text-cyan-200 mb-2">Undergraduate Student at Purdue University</h2>
+            <p className="text-cyan-400">
               I strive to directly tackle issues through data and technology.
             </p>
           </div>
 
           
-          <a href="#about-me">About Me</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
+          <p className="italic pt-16">Scroll on the Right →</p>
+
+
         </div>
 
-        <div className="flex-1 max-w-xl overflow-y-auto max-h-[calc(100vh-200px)] sticky top-20">
+        <div className="flex-1 max-w-xl overflow-y-auto max-h-[calc(100vh-200px)] sticky top-16 pt-20">
           <div className="space-y-16">
             <div id="about-me">
               <h2 className="text-3xl font-bold mb-4">About Me</h2>
-              I am a current student at Purdue University. I am pursuing a degree in Computer Science with a minor in Economics. I'm passionate about using technology to solve real-world problems in the finance sector and have directly worked on projects in this field. I have experience in data analysis, machine learning, and software development. I am always looking for new opportunities to learn and grow. I am currently seeking internships for the summer of 2025. Feel free to reach out to me at <a href="mailto:bhatt123@purdue.edu" className ="hover:underline">bhatt123@purdue.edu</a>.
+              I am currently pursuing a degree in Computer Science and a minor in Economics at Purdue University. I'm passionate about using technology to solve real-world problems in the finance sector and have directly worked on projects in this field. With experience in data analysis, machine learning, and software development, I am always looking for new opportunities to learn and grow. I am currently seeking internships for the summer of 2025. Feel free to reach out to me at <a href="mailto:bhatt123@purdue.edu" className ="hover:underline">bhatt123@purdue.edu</a>.
             </div>
+          
 
             <div id="experience">
               <h2 className="text-3xl font-bold mb-4">Experience</h2>
