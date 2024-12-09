@@ -64,6 +64,7 @@ export default function Home() {
 
           
           <p className="italic pt-16">Scroll on the Right →</p>
+          <p className="italic">Currently only optimized for Desktop.</p>
 
 
         </div>
