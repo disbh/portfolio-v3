@@ -4,46 +4,46 @@ import Project from "../components/Project";
 
 const jobExperience = [
   {
-    title: "Data Analyst",
+    title: "Data Analyst Lead",
     company: "Boilerexams",
-    duration: "November 2024 - Present",
-    description: "Analyzed over 5.64 million user submissions to derive conclusions for 21+ courses at Purdue University. Developed models and visualized key findings to understand exam question biases to better effectively prepare students for exams using data from 192 exams.",
+    duration: "November 2024 – Present",
+    description: "Led team of 8 to analyze and understand over 7.5 million user submissions for 25 Purdue courses, with 1.2k+ daily users. Created standardized difficulty categorizations using metrics like accuracy, time spent, and tool usage. Developed scalable models to identify biases in 188 exams for improved student exam preparation.",
   },
   {
-    title: "Account Director, Workshop Organizer",
-    company: "Purdue IEEE ",
-    duration: "September 2024 - Present",
-    description: "Collaborate on the development on workshops on engineering topics to foster innovative environments. Present to 50+ people at workshops teaching the intersection of machine learning and finance.",
+    title: "Vice President of Technical Committees",
+    company: "Purdue IEEE",
+    duration: "December 2024 – Present",
+    description: "Led 7 technical committees with 800+ members and $40,000+ in funds. Spearheaded workshop on machine learning and finance with 50+ attendees. Supported execution of networking banquet with 100+ attendees including sponsors, industry reps, and professors.",
   },
   {
-    title: "Volunteer Developer",
-    company: "Jubilee Club, A Bengali Cultural Club",
-    duration: "Janurary 2022 - August 2024",
-    description: "Developed and published a portal to other resources for the local ethnic community. Renovated website to attract 6,000+ unique visitors. Received “Youth Leadership” award for contribution to local community.",
+    title: "Frontend Developer",
+    company: "Jubilee Club, Bengali Cultural Club",
+    duration: "January 2022 – August 2024",d
+    description: "Published a resource portal for the local Bengali community with 1.5k monthly views. Collaborated on website renovation, attracting 6,000+ unique visitors. Honored with the “Youth Leadership” award for community contributions.",
   },
   {
-    title: "Internship",
+    title: "Junior Developer Intern",
     company: "SAP (Systems, Applications and Products in Data Processing)",
-    duration: "September 2024 - Present",
-    description: "Developed a mobile application for industry to effectively upload software issue tickets and obtain resolutions. Engaged with professionals during workshops to grow soft skills like written and oral communication.",
+    duration: "July 2023 – August 2023",
+    description: "Built a mobile ticketing application integrated with S/4 HANA for industrial issue tracking. Engaged with testing, sales, and technical support teams to understand the product lifecycle and improve user-facing features.",
   },
 ];
 
 const ProjectExperience = [
   {
     title: "Indian Tech Startup Success Prediction",
-    duration: "July 2023 - Present",
-    description: "Developed Random Forest and XGBoost models ML to predict Indian tech startup success with 82 percent accuracy. Authored paper and presented findings at the Purdue 2024 Undergraduate Research Expo.",
+    duration: "July 2023 – August 2024",
+    description: "Created machine learning models (Random Forest, XGBoost, LightGBM) to predict success of Indian tech startups, achieving 82% accuracy. Visualized key insights and outliers; most important predictors included seed lag, social media presence, and seed funding raised. Findings presented at Purdue 2024 Fall Undergraduate Research Expo.",
   },
   {
-    title: "FunCha: A Website for Ethnic Food",
-    duration: "June 2023 - August 2024",
-    description: "Developed a roadmap and led group of three to curate and compile Bengali recipes, addressing a lack of Southeast Asian ethnic food resources online. 2,000+ unique page views within the first six months.",
+    title: "FunCha: Website for Ethnic Food",
+    duration: "June 2023 – August 2024",
+    description: "Led a team of three to develop a Bengali recipe site using Astro, React, and Tailwind CSS. Addressed lack of Southeast Asian food content online and achieved 2,000+ unique page views in six months. Designed user-centric roadmap for interface development.",
   },
   {
     title: "Wharton High School Data Science Competition",
-    duration: "January 2024 - May 2024",
-    description: "Competed and placed 2nd against 300+ teams from 37 countries with the highest accuracy model and presentation. Developed machine learning models to predict league and tournament results of a simulated soccer league.",
+    duration: "January 2024 – May 2024",
+    description: "Collaborated in a team of five to develop models predicting outcomes of a simulated soccer league using PyCaret and Seaborn. Placed 2nd out of 300+ teams from 37 countries, recognized for the most accurate model and presentation (via Keynote).",
   },
 ];
 
