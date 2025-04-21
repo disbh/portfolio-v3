@@ -18,7 +18,7 @@ const jobExperience = [
   {
     title: "Frontend Developer",
     company: "Jubilee Club, Bengali Cultural Club",
-    duration: "January 2022 – August 2024",d
+    duration: "January 2022 – August 2024",
     description: "Published a resource portal for the local Bengali community with 1.5k monthly views. Collaborated on website renovation, attracting 6,000+ unique visitors. Honored with the “Youth Leadership” award for community contributions.",
   },
   {
