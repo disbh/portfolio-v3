@@ -1,14 +1,4 @@
 import Image from "next/image";
-import Resume from "../components/Resume";
-import Project from "../components/Project";
-
-const jobExperience = [
-
-];
-
-const ProjectExperience = [
- 
-];
 
 
 export default function Home() {
