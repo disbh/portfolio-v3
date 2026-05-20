@@ -13,7 +13,7 @@ export default function Home() {
             <p className="text-gray-400">
               I strive to directly tackle issues through data and technology.
               <br></br>
-              Check my resume out below.
+              Check my resume out below. 
             </p>
           </div>
 
@@ -24,10 +24,30 @@ export default function Home() {
 
         <div className="flex-1 max-w-xl overflow-y-auto max-h-[calc(100vh-200px)] sticky top-16 pt-20">
           <div className="space-y-16">
-            
-          
 
-            
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-100 mb-4">
+                Minute Projects
+              </h2>
+
+              <div className="space-y-3">
+                <a
+                  href="/dcf.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block border border-gray-800 rounded-lg p-4 hover:border-gray-600 transition-colors"
+                >
+                  <h3 className="text-lg font-medium text-gray-100">
+                    DCF Model
+                  </h3>
+
+                  <p className="text-sm text-gray-400 mt-1">
+                    Minimal discounted cash flow valuation model with editable assumptions.
+                  </p>
+                </a>
+              </div>
+            </section>
+
           </div>
         </div>
       </main>

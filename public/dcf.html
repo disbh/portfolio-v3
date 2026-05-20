@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Minimal DCF Model</title>
+<style>
+body{font-family:Arial,sans-serif;background:#111;color:#e8e8e8;margin:0;padding:28px 48px;font-size:13px}
+h1{text-align:center;margin-top:0;margin-bottom:24px;font-size:24px;color:#f2f2f2}
+.layout{display:flex;gap:20px;align-items:flex-start;max-width:1250px;margin:0 auto}
+.inputs-panel{width:240px;background:#1a1a1a;padding:14px;flex-shrink:0}
+.inputs-panel h2{margin-top:0;font-size:16px;color:#f0f0f0}
+.input-group{display:flex;flex-direction:column;margin-bottom:10px}
+label{margin-bottom:4px;font-size:12px;color:#ddd}
+input{padding:6px;border:1px solid #333;background:#101010;color:#eee;font-size:12px}
+.table-container{flex:1;overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:#151515}
+th,td{border:1px solid #2c2c2c;padding:0;font-size:12px;text-align:center;white-space:nowrap;color:#e8e8e8}
+th{padding:7px;background:#1e1e1e;color:#f1f1f1}
+th:first-child,td:first-child{text-align:center;background:#202020;font-weight:bold;min-width:190px;padding:7px}
+.section{background:#0b0b0b!important;color:#f5f5f5;font-weight:bold;text-align:center!important;padding:7px!important}
+.cell-input{width:100%;border:none;background:transparent;text-align:center;padding:7px;box-sizing:border-box;font-size:12px;color:#eee}
+.cell-input:focus{outline:2px solid #777;background:#222}
+.readonly{background:#171717;color:#e6e6e6}
+</style>
+</head>
+<body>
+<h1>DCF Model</h1>
+<div class="layout">
+<div class="inputs-panel">
+<h2>Inputs</h2>
+<div class="input-group">
+<label>Starting EBIT</label>
+<input type="number" id="startingEbit" value="100000">
+</div>
+<div class="input-group">
+<label>EBIT Growth Rate (%)</label>
+<input type="number" id="growthRate" value="10">
+</div>
+<div class="input-group">
+<label>Tax Rate (%)</label>
+<input type="number" id="taxRate" value="25">
+</div>
+<div class="input-group">
+<label>Capex</label>
+<input type="number" id="capex" value="100000">
+</div>
+<div class="input-group">
+<label>Depreciation</label>
+<input type="number" id="depreciation" value="50000">
+</div>
+<div class="input-group">
+<label>Working Capital Change</label>
+<input type="number" id="workingCapital" value="25000">
+</div>
+<div class="input-group">
+<label>Discount Rate (%)</label>
+<input type="number" id="discountRate" value="8">
+</div>
+<div class="input-group">
+<label>Terminal Growth Rate (%)</label>
+<input type="number" id="terminalGrowth" value="3">
+</div>
+</div>
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Row Header</th>
+<th>2027</th>
+<th>2028</th>
+<th>2029</th>
+<th>2030</th>
+<th>2031</th>
+</tr>
+</thead>
+
+<tbody>
+<tr><td class="section" colspan="6">Valuation</td></tr>
+
+<tr>
+<td>EBIT</td>
+<td><input class="cell-input readonly" id="ebit1" readonly></td>
+<td><input class="cell-input readonly" id="ebit2" readonly></td>
+<td><input class="cell-input readonly" id="ebit3" readonly></td>
+<td><input class="cell-input readonly" id="ebit4" readonly></td>
+<td><input class="cell-input readonly" id="ebit5" readonly></td>
+</tr>
+
+<tr><td class="section" colspan="6">Net Operating Loss</td></tr>
+
+<tr>
+<td>Opening Balance</td>
+<td><input class="cell-input readonly" id="opening1" readonly></td>
+<td><input class="cell-input readonly" id="opening2" readonly></td>
+<td><input class="cell-input readonly" id="opening3" readonly></td>
+<td><input class="cell-input readonly" id="opening4" readonly></td>
+<td><input class="cell-input readonly" id="opening5" readonly></td>
+</tr>
+
+<tr>
+<td>Current Loss</td>
+<td><input class="cell-input readonly" id="currentLoss1" readonly></td>
+<td><input class="cell-input readonly" id="currentLoss2" readonly></td>
+<td><input class="cell-input readonly" id="currentLoss3" readonly></td>
+<td><input class="cell-input readonly" id="currentLoss4" readonly></td>
+<td><input class="cell-input readonly" id="currentLoss5" readonly></td>
+</tr>
+
+<tr>
+<td>Sub Total</td>
+<td><input class="cell-input readonly" id="subtotal1" readonly></td>
+<td><input class="cell-input readonly" id="subtotal2" readonly></td>
+<td><input class="cell-input readonly" id="subtotal3" readonly></td>
+<td><input class="cell-input readonly" id="subtotal4" readonly></td>
+<td><input class="cell-input readonly" id="subtotal5" readonly></td>
+</tr>
+
+<tr>
+<td>Loss Used</td>
+<td><input class="cell-input readonly" id="lossUsed1" readonly></td>
+<td><input class="cell-input readonly" id="lossUsed2" readonly></td>
+<td><input class="cell-input readonly" id="lossUsed3" readonly></td>
+<td><input class="cell-input readonly" id="lossUsed4" readonly></td>
+<td><input class="cell-input readonly" id="lossUsed5" readonly></td>
+</tr>
+
+<tr>
+<td>Closing Balance</td>
+<td><input class="cell-input readonly" id="closing1" readonly></td>
+<td><input class="cell-input readonly" id="closing2" readonly></td>
+<td><input class="cell-input readonly" id="closing3" readonly></td>
+<td><input class="cell-input readonly" id="closing4" readonly></td>
+<td><input class="cell-input readonly" id="closing5" readonly></td>
+</tr>
+
+<tr><td class="section" colspan="6">Free Cash Flow</td></tr>
+
+<tr>
+<td>Earning Before Tax</td>
+<td><input class="cell-input readonly" id="ebt1" readonly></td>
+<td><input class="cell-input readonly" id="ebt2" readonly></td>
+<td><input class="cell-input readonly" id="ebt3" readonly></td>
+<td><input class="cell-input readonly" id="ebt4" readonly></td>
+<td><input class="cell-input readonly" id="ebt5" readonly></td>
+</tr>
+
+<tr>
+<td>Interest</td>
+<td><input class="cell-input readonly" value="0" readonly></td>
+<td><input class="cell-input readonly" value="0" readonly></td>
+<td><input class="cell-input readonly" value="0" readonly></td>
+<td><input class="cell-input readonly" value="0" readonly></td>
+<td><input class="cell-input readonly" value="0" readonly></td>
+</tr>
+
+<tr>
+<td>EBIT</td>
+<td><input class="cell-input readonly" id="fcfEbit1" readonly></td>
+<td><input class="cell-input readonly" id="fcfEbit2" readonly></td>
+<td><input class="cell-input readonly" id="fcfEbit3" readonly></td>
+<td><input class="cell-input readonly" id="fcfEbit4" readonly></td>
+<td><input class="cell-input readonly" id="fcfEbit5" readonly></td>
+</tr>
+
+<tr>
+<td>Less Taxes</td>
+<td><input class="cell-input readonly" id="tax1" readonly></td>
+<td><input class="cell-input readonly" id="tax2" readonly></td>
+<td><input class="cell-input readonly" id="tax3" readonly></td>
+<td><input class="cell-input readonly" id="tax4" readonly></td>
+<td><input class="cell-input readonly" id="tax5" readonly></td>
+</tr>
+
+<tr>
+<td>Less Capex</td>
+<td><input class="cell-input" id="capex1"></td>
+<td><input class="cell-input" id="capex2"></td>
+<td><input class="cell-input" id="capex3"></td>
+<td><input class="cell-input" id="capex4"></td>
+<td><input class="cell-input" id="capex5"></td>
+</tr>
+
+<tr>
+<td>Plus Depreciation</td>
+<td><input class="cell-input" id="dep1"></td>
+<td><input class="cell-input" id="dep2"></td>
+<td><input class="cell-input" id="dep3"></td>
+<td><input class="cell-input" id="dep4"></td>
+<td><input class="cell-input" id="dep5"></td>
+</tr>
+
+<tr>
+<td>Less Changes in Working Capital</td>
+<td><input class="cell-input" id="wc1"></td>
+<td><input class="cell-input" id="wc2"></td>
+<td><input class="cell-input" id="wc3"></td>
+<td><input class="cell-input" id="wc4"></td>
+<td><input class="cell-input" id="wc5"></td>
+</tr>
+
+<tr>
+<td>Unlevered Free Cash Flow</td>
+<td><input class="cell-input readonly" id="ufcf1" readonly></td>
+<td><input class="cell-input readonly" id="ufcf2" readonly></td>
+<td><input class="cell-input readonly" id="ufcf3" readonly></td>
+<td><input class="cell-input readonly" id="ufcf4" readonly></td>
+<td><input class="cell-input readonly" id="ufcf5" readonly></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<script>
+function cleanNumber(value){return Number(String(value).replace(/,/g,"").replace(/[()]/g,""))||0}
+function formatNumber(num){const rounded=Math.round(num);return rounded<0?"("+Math.abs(rounded).toLocaleString()+")":rounded.toLocaleString()}
+function setValue(id,value){document.getElementById(id).value=formatNumber(value)}
+function getInputValue(id){return Number(document.getElementById(id).value)||0}
+
+function initializeEditableRows(){
+const capex=getInputValue("capex")
+const depreciation=getInputValue("depreciation")
+const workingCapital=getInputValue("workingCapital")
+for(let i=1;i<=5;i++){
+document.getElementById(`capex${i}`).value=formatNumber(capex)
+document.getElementById(`dep${i}`).value=formatNumber(depreciation)
+document.getElementById(`wc${i}`).value=formatNumber(workingCapital)
+}
+}
+
+function calculateDCF(){
+const startingEbit=getInputValue("startingEbit")
+const growthRate=getInputValue("growthRate")/100
+const taxRate=getInputValue("taxRate")/100
+let openingLoss=0
+
+for(let i=1;i<=5;i++){
+const ebit=startingEbit*Math.pow(1+growthRate,i)
+const capex=cleanNumber(document.getElementById(`capex${i}`).value)
+const depreciation=cleanNumber(document.getElementById(`dep${i}`).value)
+const workingCapital=cleanNumber(document.getElementById(`wc${i}`).value)
+
+const currentLoss=ebit<0?Math.abs(ebit):0
+const subtotal=openingLoss+currentLoss
+const lossUsed=ebit>0?Math.min(subtotal,ebit):0
+const closingBalance=subtotal-lossUsed
+const taxes=ebit>0?Math.max(0,(ebit-lossUsed)*taxRate):0
+
+const ufcf=ebit-taxes-capex+depreciation-workingCapital
+
+setValue(`ebit${i}`,ebit)
+setValue(`opening${i}`,openingLoss)
+setValue(`currentLoss${i}`,currentLoss)
+setValue(`subtotal${i}`,subtotal)
+setValue(`lossUsed${i}`,lossUsed)
+setValue(`closing${i}`,closingBalance)
+setValue(`ebt${i}`,ebit)
+setValue(`fcfEbit${i}`,ebit)
+setValue(`tax${i}`,taxes)
+setValue(`ufcf${i}`,ufcf)
+
+openingLoss=closingBalance
+}
+}
+
+function setupExcelNavigation(){
+const cells=Array.from(document.querySelectorAll(".cell-input"))
+
+cells.forEach((cell,index)=>{
+cell.addEventListener("focus",()=>{cell.select()})
+
+cell.addEventListener("keydown",(e)=>{
+const columns=5
+let nextIndex=null
+
+if(e.key==="ArrowRight")nextIndex=index+1
+if(e.key==="ArrowLeft")nextIndex=index-1
+if(e.key==="ArrowDown"||e.key==="Enter")nextIndex=index+columns
+if(e.key==="ArrowUp")nextIndex=index-columns
+
+if(nextIndex!==null){
+e.preventDefault()
+
+while(cells[nextIndex]&&cells[nextIndex].readOnly){
+if(e.key==="ArrowRight")nextIndex++
+else if(e.key==="ArrowLeft")nextIndex--
+else if(e.key==="ArrowDown"||e.key==="Enter")nextIndex+=columns
+else if(e.key==="ArrowUp")nextIndex-=columns
+}
+
+if(cells[nextIndex])cells[nextIndex].focus()
+}
+})
+
+cell.addEventListener("input",calculateDCF)
+
+cell.addEventListener("blur",()=>{
+if(!cell.readOnly){
+cell.value=formatNumber(cleanNumber(cell.value))
+calculateDCF()
+}
+})
+})
+}
+
+document.querySelectorAll(".inputs-panel input").forEach(input=>{
+input.addEventListener("input",()=>{
+initializeEditableRows()
+calculateDCF()
+})
+})
+
+initializeEditableRows()
+calculateDCF()
+setupExcelNavigation()
+</script>
+</body>
+</html>
